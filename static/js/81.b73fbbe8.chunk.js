@@ -126,7 +126,7 @@
           },
           auto: {
             title: "Auto/Parkeren",
-            text: "Parkeren kan in de parkeergarage van de Zeeduinweg, u volgt in de garage de borden San Francisco. Eerste twee uur gratis wanneer je iets afrekent bij de PLUS. Parkeren kan voor de deur voor 3,90 per uur.",
+            text: "Parkeren kan voor de deur voor 3,90 per uur.",
           },
         };
     },
