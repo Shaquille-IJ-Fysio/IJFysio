@@ -79,10 +79,6 @@
             title: "Shaquille",
             text: "Shaquille is een vriendelijke en nieuwsgierige collega, een echt bedreven fysiotherapeut die zijn kennis op een begrijpelijke manier overbrengt om je verder te helpen te herstellen. Er zijn maar weinig onderwerpen binnen fysiotherapie voor hem onbekend. Dit maakt hem een vraagbaak voor collega\u2019s. als hij het even niet weet heeft hij in zijn boekenkast nog wel wat staan waar hij het kan vinden. Hij was topsporter en heeft een tijd in de Verenigde Staten gestudeerd om daar zijn dromen na te streven de olympische spelen te halen met discuswerpen. Op de atletiekbaan stond hij bekend als een sociale jongen met oprechte interesse in anderen. Zijn zorgzame houding en geduld maken hem een zeer fijne collega en hulpverlener.",
           },
-          william: {
-            title: "William",
-            text: "William is een bijzonder behulpzame en betrokken collega. hij helpt mensen echt weer veel vertrouwen te krijgen in hun capaciteiten. Voor hem zijn de doelen die jullie samen opstellen niet gek genoeg. Hij voelt haarfijn aan waar de grens ligt tussen genoeg en teveel. Zijn creativiteit is eindeloos en dit uit hij ook graag in dans. Hoewel hij hier graag meer mee zou willen doen, vergt het vak veel tijd. Wel vindt hij toch een paar keer per jaar de kans om een dansoptreden te doen waarbij je mond openvalt van verbazing hoe mooi en soepel een mens kan bewegen. De vrijheid die hij daarin ervaart wil hij graag meegeven zodat jij ook weer vanzelfsprekend kan bewegen.",
-          },
           fysiotherapie: {
             title: "Fysiotherapie",
             text: "Het lichaam functioneert niet meer zoals jij wil. Hierdoor merk je klachten bij verschillende activiteiten. Het lukt niet meer om de trap op te komen , een sprintje te trekken naar de tram of misschien heb je wel moeite om de auto in te komen. Het kan u ook belemmeren in sport, waardoor je niet meer gezellig kan hockeyen/voetballen met het vriendenteam op veld 3 of kan meewandelen met de groep op maandag ochtend. Een bezoek aan de specialisten in fysiotherapie van IJFysio kan jou een uitkomst bieden. ",
@@ -993,6 +989,7 @@
                     e.title &&
                       (0, a.jsx)("div", {
                         className: e.color ? "" : x.hoverTitle,
+                        style: e.color ? {} : { top: "75%", transform: "translateY(calc(var(--hover) * 300%))" },
                         children: (0, a.jsx)(o.wI, {
                           children: e.title,
                           color:
@@ -1333,12 +1330,15 @@
                 children: "Onze specialisten",
                 color: "zand",
               }),
-              (0, a.jsx)(o.Nk, {
-                centeredHorizontal: !0,
-                type: "row",
-                children: e.team.map((e) =>
-                  (0, a.jsx)(y, { title: e.title, image: e.src }, e.title),
-                ),
+              (0, a.jsx)("div", {
+                style: { maxWidth: "700px", margin: "0 auto" },
+                children: (0, a.jsx)(o.Nk, {
+                  centeredHorizontal: !0,
+                  type: "row",
+                  children: e.team.map((e) =>
+                    (0, a.jsx)(y, { title: e.title, image: e.src }, e.title),
+                  ),
+                }),
               }),
             ],
           }),
@@ -1582,13 +1582,6 @@
             text: l.F.shaquille.text,
             color: "lichtBlauw",
           },
-          {
-            src: "assets/icons/IJFysio_Beeldmerk_dieporanje_transparant.svg",
-            alt: "IJFysio_logo",
-            title: l.F.william.title,
-            text: l.F.william.text,
-            color: "lichtBlauw",
-          },
         ];
         return (0, a.jsx)(i.mZ, { items: e });
       }
@@ -1625,11 +1618,6 @@
             src: "assets/images/Naamloos-1.jpg",
             alt: "Foto Shaquille",
             title: l.F.shaquille.title,
-          },
-          {
-            src: "assets/icons/IJFysio_Beeldmerk_dieporanje_transparant.svg",
-            alt: "image",
-            title: l.F.william.title,
           },
         ];
         return (0, a.jsx)(i.Xy, { team: e });
